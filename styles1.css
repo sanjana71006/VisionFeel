@@ -1,0 +1,179 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #8beade;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #1abc9c;
+}
+
+/* Section Headings with Emojis */
+.section {
+  margin-top: 40px;
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 32px;
+}
+
+h2::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+}
+
+/* Custom emojis for sections */
+.section:nth-of-type(1) h2::before {
+  content: "🔍";
+}
+.section:nth-of-type(2) h2::before {
+  content: "🧠";
+}
+
+/* Inputs and Buttons */
+input[type="file"],
+input[type="text"] {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  caret-color: #3498db;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:focus,
+input[type="text"]:focus {
+  border-color: #3498db;
+  background-color: #eaf6ff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Image Preview */
+img#detectionImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img#detectionImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Object Detection Results */
+#detectionResults ul {
+  list-style: none;
+  padding: 0;
+}
+
+#detectionResults li {
+  background-color: #ecf0f1;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#detectionResults li:hover {
+  background-color: #d0dfe6;
+}
+
+/* Sentiment Result with Emojis */
+#sentimentResult p {
+  font-size: 18px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Sentiment Emojis */
+.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.positive::before {
+  content: "😊 ";
+}
+
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.negative::before {
+  content: "😞 ";
+}
+
+.neutral {
+  color: #555;
+  font-weight: bold;
+}
+
+.neutral::before {
+  content: "😐 ";
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
